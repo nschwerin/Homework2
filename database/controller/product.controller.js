@@ -1,6 +1,8 @@
 const Express = require('express');
 const BodyParser = require('body-parser');
 
+var UserController = require('../services/product.service');
+
 const app = Express();
 
 app.use(BodyParser.json());

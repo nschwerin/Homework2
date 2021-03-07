@@ -2,7 +2,7 @@ const Express = require('express');
 const BodyParser = require('body-parser');
 const Mongoose = require('mongoose');
 
-const Service = require('../dbServices')
+const Service = require('../services/user.service')
 
 const app = Express();
 

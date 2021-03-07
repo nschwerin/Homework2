@@ -10,10 +10,10 @@ var productRouter = require('../database/routes/product.routes');
 app.use(BodyParser.json());
 
 app.use('/', userRouter);
-app.use('/',productRouter);
+app.use('/', productRouter);
 
 (async () => {
-  await Mongoose.connect('mongodb+srv://admin:admin@cluster0-cde82.mongodb.net/mongodb?retryWrites=true&w=majority', {
+  await Mongoose.connect( ENV Variable {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
