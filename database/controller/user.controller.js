@@ -91,7 +91,7 @@ const patchUsers = async (request, response) => {
 
 module.exports = {
     getUsers,
-    getUserSSN,
+    getUsersSSN,
     postUsers,
     deleteUsers,
     deleteUsersSSN,
