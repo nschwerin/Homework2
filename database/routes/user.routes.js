@@ -4,11 +4,11 @@ var router = express.Router();
 var UserController = require('../controller/user.controller');
 
 router.get('/', UserController.getUsers);
-router.get('/', UserController.getUsersSSN);
+router.get('/:ssn', UserController.getUsersSSN);
 router.post('/', UserController.postUsers);
 router.delete('/', UserController.deleteUsers);
-router.delete('/', UserController.deleteUsersSSN);
-router.put('/', UserController.putUsers);
-patch.delete('/', UserController.patchUsers);
+router.delete('/:ssn', UserController.deleteUsersSSN);
+router.put('/:ssn', UserController.putUsers);
+patch.delete('/:ssn', UserController.patchUsers);
 
 module.exports = router;
