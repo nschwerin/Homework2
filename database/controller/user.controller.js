@@ -25,7 +25,7 @@ const getUsers =  async (request, response) => {
     await doActionThatMightFailValidation(request, response, async () => {
         response.json(await Service.getUser(request.query).select('-_id -__v'));
     });
-});
+};
 
 const getUsersSSN = async (request, response) => {
     await doActionThatMightFailValidation(request, response, async () => {
@@ -36,20 +36,20 @@ const getUsersSSN = async (request, response) => {
             response.sendStatus(404);
         }
     });
-});
+};
 
 const postUsers = async (request, response) => {
     await doActionThatMightFailValidation(request, response, async () => {
         await new Service.postUser(request.body).save();
         response.sendStatus(201);
     });
-});
+};
 
 const deleteUsers = async (request, response) => {
     await doActionThatMightFailValidation(request, response, async () => {
         response.sendStatus((await Service.deleteUser(request.query)).deletedCount > 0 ? 200 : 404);
     });
-});
+};
 
 const deleteUsersSSN = async (request, response) => {
     await doActionThatMightFailValidation(request, response, async () => {
@@ -57,7 +57,7 @@ const deleteUsersSSN = async (request, response) => {
             ssn: request.params.ssn,
         })).deletedCount > 0 ? 200 : 404);
     });
-});
+};
 
 const putUsers = async (request, response) => {
     const { ssn } = request.params;
@@ -69,7 +69,7 @@ const putUsers = async (request, response) => {
         });
         response.sendStatus(200);
     });
-});
+};
 
 const patchUsers = async (request, response) => {
     const { ssn } = request.params;
@@ -87,7 +87,7 @@ const patchUsers = async (request, response) => {
             response.sendStatus(404);
         }
     });
-});
+};
 
 module.exports = {
     getUsers,
