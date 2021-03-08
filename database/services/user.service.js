@@ -44,7 +44,7 @@ exports.deleteUsers = async function (query) {
 exports.deleteUsersSSN = async function (query) {
 
     try {
-        return await User.deleteOne({ssn: request.params.ssn});
+        return await User.deleteOne({ssn: query.params.ssn});
     } catch (e) {
         // Log Errors
         throw Error('Error users')
