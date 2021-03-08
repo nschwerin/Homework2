@@ -3,7 +3,6 @@ const BodyParser = require('body-parser');
 const Mongoose = require('mongoose');
 
 const app = Express();
-
 app.use(BodyParser.json());
 
 const productRouter = require('./database/routes/product.routes');
@@ -14,7 +13,7 @@ app.use('/', productRouter);
 
 (async () => {
   const { url } = process.env;
-  await Mongoose.connect( url, {
+  await Mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,

@@ -1,6 +1,5 @@
 const User = require('../models/user')
 
-
 exports.getUsers = async function (query) {
 
     try {
