@@ -1,7 +1,7 @@
 const Express = require('express');
 const BodyParser = require('body-parser');
 
-var UserController = require('../services/product.service');
+const UserController = require('../services/product.service');
 
 const app = Express();
 
